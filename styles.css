@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
-
 :root {
   --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
   --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
@@ -7,20 +5,97 @@
   --Light-Grayish-Blue: hsl(210, 46%, 95%);
 }
 
+/* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
   border: 0;
 }
-html {
-  box-sizing: border-box;
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
 }
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
 body {
   font-family: "Manrope", sans-serif;
   min-height: 100vh;
@@ -32,41 +107,41 @@ body {
 main {
   display: flex;
   align-items: center;
-  width: 730px;
-  height: 280px;
-  border-radius: 10px;
+  width: 45.625rem;
+  height: 17.5rem;
+  border-radius: 0.625rem;
   background: #fff;
-  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.5);
+  box-shadow: 0 2.5rem 2.5rem 0.625rem rgba(201, 213, 225, 0.5);
   position: relative;
 }
 .image-section {
   align-self: baseline;
 }
 .image-section .drawers {
-  width: 285px;
-  height: 280px;
+  width: 17.8125rem;
+  height: 17.5rem;
   text-align: left;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0.625rem;
+  border-top-left-radius: 0.625rem;
 }
 .text-section {
-  padding: 32px 40px;
+  padding: 2rem 2.5rem;
 }
 h1 {
   color: var(--Very-Dark-Grayish-Blue);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 28px;
-  letter-spacing: 0.25px;
-  margin-bottom: 12px;
+  line-height: 1.75rem;
+  letter-spacing: 0.015625rem;
+  margin-bottom: 0.75rem;
 }
 .text-section p {
   color: var(--Desaturated-Dark-Blue);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.122px;
-  margin-bottom: 32px;
+  line-height: 1.25rem;
+  letter-spacing: 0.007625rem;
+  margin-bottom: 2rem;
   position: relative;
   top: -1px;
 }
@@ -78,37 +153,37 @@ h1 {
   top: -14px;
 }
 .author img {
-  width: 40px;
-  height: 40px;
-  border-radius: 40px;
-  margin-right: 16px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
+  margin-right: 1rem;
 }
 .author-info {
-  margin-right: 161px;
+  margin-right: 10.0625rem;
   position: relative;
   top: 1px;
 }
 .author-info .name {
   color: var(--Very-Dark-Grayish-Blue);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0.122px;
+  line-height: 1.25rem;
+  letter-spacing: 0.007625rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 .author-info .date {
   color: var(--Grayish-Blue);
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0.122px;
+  line-height: 1.25rem;
+  letter-spacing: 0.007625rem;
   margin-top: 0;
   margin-bottom: 0;
 }
 .share-div {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: var(--Light-Grayish-Blue);
   display: flex;
@@ -117,8 +192,8 @@ h1 {
   cursor: pointer;
 }
 .share-div .share {
-  width: 15px;
-  height: 13px;
+  width: 0.9375rem;
+  height: 0.8125rem;
   margin-right: 0;
   cursor: pointer;
 }
@@ -127,15 +202,15 @@ h1 {
 }
 .social {
   position: absolute;
-  width: 248px;
-  height: 55px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 10px 0px rgba(201, 213, 225, 0.5);
+  width: 15.5rem;
+  height: 3.4375rem;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.625rem 0.625rem 0 rgba(201, 213, 225, 0.5);
   background-color: var(--Very-Dark-Grayish-Blue);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: 36px;
+  padding-left: 2.25rem;
   left: 75.2%;
   bottom: 33%;
 }
@@ -144,30 +219,30 @@ h1 {
   position: absolute;
   bottom: -23px;
   left: 50%;
-  margin-left: -10px;
-  border-width: 12px;
+  margin-left: -0.625rem;
+  border-width: 0.75rem;
   border-style: solid;
   border-color: var(--Very-Dark-Grayish-Blue) transparent transparent
     transparent;
 }
 .social p {
   color: var(--Grayish-Blue);
-  font-size: 13px;
+  font-size: 0.8125rem;
   text-transform: uppercase;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 5px;
-  margin: 0 21px 0 0;
+  line-height: 1.25rem;
+  letter-spacing: 0.3125rem;
+  margin: 0 1.3125rem 0 0;
 }
 .icons .twitter {
-  width: 20px;
-  height: 16.25px;
+  width: 1.25rem;
+  height: 1.015625rem;
 }
 .social .icons {
   display: flex;
-  gap: 16px;
+  gap: 1rem;
   align-items: center;
-  padding-top: 4px;
+  padding-top: 0.25rem;
 }
 .icon:hover {
   filter: invert(29%) sepia(14%) saturate(912%) hue-rotate(178deg)
@@ -180,39 +255,39 @@ h1 {
   visibility: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   main {
     flex-direction: column;
-    width: 327px;
-    height: 512px;
+    width: 20.4375rem;
+    height: 32rem;
   }
   .image-section .drawers {
-    width: 327px;
-    height: 200px;
+    width: 20.4375rem;
+    height: 12.5rem;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-top-right-radius: 0.625rem;
+    border-top-left-radius: 0.625rem;
   }
   .text-section {
-    padding: 30px 32px 20px;
+    padding: 1.875rem 2rem 1.25rem;
   }
   h1 {
     margin-top: 0;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.2px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.0125rem;
   }
   .author {
     position: relative;
     top: -1px;
   }
   .author-info {
-    margin-right: 59px;
+    margin-right: 3.6875rem;
   }
   .social {
-    width: 327px;
-    height: 64px;
+    width: 20.4375rem;
+    height: 4rem;
     left: 0%;
     bottom: 0%;
     border-top-right-radius: 0;
@@ -228,12 +303,12 @@ h1 {
     background-color: var(--Grayish-Blue);
   }
   .icons {
-    margin-right: 56px;
+    margin-right: 3.5rem;
   }
   .hide {
     visibility: visible;
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     background-color: var(--Light-Grayish-Blue);
     display: flex;
