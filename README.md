@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/mkboris/Article-preview-component
-- Live Site URL: https://article-preview-component-rho-seven.vercel.app/
+- Live Site URL: https://mkboris.github.io/Article-preview-component/
   
 ### Built with
 
